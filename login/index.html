@@ -13,16 +13,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
+
 <body>
     <div class="container">
         <div class="round">
-            <img class="logo" src="../login/images/Gemini_Generated_Image_ocpfiqocpfiqocpf.png" alt="Logo">
+            <img class="logo" src="/login/images/Gemini_Generated_Image_ocpfiqocpfiqocpf.png" alt="Logo">
         </div>
+        <div class="wrap-input-label">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Insira o usuário">
+        </div>
+        <div class="wrap-input-label">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Insira a senha">
+            <div onclick="showPassword()">
+                <img src="/login/images/show.png" alt="Eye" class="eye" width="25px" id="eye">
+            </div>
+        </div>
+
+        <button class="btn-login" onclick="login()">Login</button>
     </div>
-    <h1>qualquer</h1> </h1>
 
-
-    <h1>Login</h1>
+    <div class="error-div" id="error-modal">
+        <h3>Credenciais Incorretas!</h3>
+        <button onclick="fecharError()">X</button>
+    </div>
     <script src="script.js"></script>
 </body>
 
