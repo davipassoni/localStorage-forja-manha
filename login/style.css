@@ -93,7 +93,7 @@ body{
     padding: 8xp 0xp;
     border: none;
     width: 100%;
-    border-bottom: 2px solid  rgb(0, 0, 0);
+    border-bottom: 2px solid black;
     font-size: 18px;
     color: rgb(0, 0, 0);
 
@@ -113,7 +113,7 @@ input:focus{
     outline: none;
     color: rgb(0, 0, 0);
     font-size: 16px;
-    border-bottom: 2px solid rgb(68, 29, 71);
+    border-bottom: 2px solid rgb(0, 0, 0);
 
 }
 
