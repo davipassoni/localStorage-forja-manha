@@ -1,0 +1,180 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.logo{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+body{
+      font-family: "Comic Neue", cursive;
+      background-image:url(images/abstract-blue-background-simple-design-for-your-website-free-vector.jpg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+    }
+
+    .container{
+        position: relative;
+        background-color: rgb(89, 82, 170);
+        width: 350px;
+        height: 300px;
+        border: 2px solid rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+        padding: 10px ;
+
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    
+
+
+
+
+
+   .round{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    border: 6px solid rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.wrap-input-label{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    width: 80%;
+    position: relative;
+}
+
+.eye{
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+    opacity: 0.7;
+
+}
+
+
+.eye:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.wrap-input-label label{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
+
+.wrap-input-label input {
+    background-color: transparent;
+    padding: 8xp 0xp;
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid black;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+
+
+}
+
+
+input::placeholder{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+
+}
+
+
+input:focus{
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+
+}
+
+.btn-login{
+    padding: 10px;
+    width: 81%;
+    background-color: rgb(255, 246, 246);
+    border-radius: 999px;
+    border: none;
+    border: 2px solid rgb(0, 0, 0);
+    font-size:  20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    transition: all 200ms ease-in-out;
+    margin-top: 10px;
+}
+
+
+
+
+.btn-login:hover{
+    cursor: pointer;
+    color: rgb(100, 3, 3);
+    border: 2px solid rgb(178, 65, 212);
+    box-shadow: rgba(135, 31, 177, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.8) 0px 12px 13px, rgba(0, 0, 0, 0.8) 0px -3px 5px;
+}
+
+
+
+.error-div{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: pink;
+    gap: 2vh;
+    padding: 10px;
+    position: absolute;
+    bottom: 5%;
+    font-size: 14px;
+    font-weight: lighter;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.8) 0px 12px 13px, rgba(0, 0, 0, 0.8) 0px -3px 5px;
+}
+
+
+.error-div button{
+    background-color: transparent;
+    border: none;
+    opacity: 0.7;
+    transition: all 200ms linear;
+
+
+}
+
+
+
+
+
+.error-div button:hover{
+    cursor: pointer;
+    opacity: 1;
+}

@@ -1,0 +1,99 @@
+[
+{
+
+ "id": 1,
+        "desc": "kimetsu no yaiba",
+        "imagem": "/dados/images/id 1.webp",
+        "preco": 180.00
+
+},
+
+
+{
+
+        "id": 2,
+        "desc":"bleach",
+        "imagem": "/dados/images/id 2.webp",
+        "preco": 180.00
+
+},
+
+
+{
+
+ "id": 3,
+        "desc": "joo part 1",
+        "imagem": "/dados/images/OIP (2).webp",
+        "preco": 45.00
+
+},
+
+
+
+{
+
+ "id": 4,
+        "desc": "jojo part 2",
+        "imagem": "/dados/images/OIP (3).webp",
+        "preco": 180.00
+
+},
+
+{
+
+ "id": 5,
+        "desc": "jojo part 3",
+        "imagem": "/dados/images/OIP (4).webp",
+        "preco": 180.00
+
+},
+
+{
+
+ "id": 6,
+        "desc": "jojo part 4",
+        "imagem": "/dados/images/OIP (5).webp",
+        "preco": 180.00
+
+},
+
+{
+
+ "id": 7,
+        "desc": "jojo part 5",
+        "imagem": "/dados/images/OIP (6).webp",
+        "preco": 180.00
+
+},
+
+{
+
+ "id": 8,
+        "desc": "jojo part 6",
+        "imagem": "/dados/images/OIP (7).webp",
+        "preco": 180.00
+
+},
+
+{
+
+ "id": 9,
+        "desc": "jojo part 7",
+        "imagem": "/dados/images/OIP (8).webp",
+        "preco": 180.00
+
+},
+
+{
+
+ "id": 10,
+        "desc": "jojo part 8",
+        "imagem": "/dados/images/OIP (9).webp",
+        "preco": 180.00
+
+}
+
+
+
+
+]
