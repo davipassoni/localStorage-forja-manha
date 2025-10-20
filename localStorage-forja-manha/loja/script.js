@@ -1,9 +1,9 @@
-let produtos = []
+let produtos
 
-window.onload = function() {
+window.onload = function(){
     var storedUser = localStorage.getItem("usuario")
     var user = JSON.parse(storedUser)
-   
+
     var dataEntrada = new Date(user.dataEntrada)
 
     var dataFormatada = dataEntrada.toLocaleString("pt-BR", {
@@ -19,13 +19,12 @@ window.onload = function() {
     document.getElementById("idPerfil").textContent = user.id
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function(){
     fetch("../Dados/loja.json")
         .then((response) => response.json())
         .then((data) => {
             produtos = data
             const produtosContainer = document.getElementById("produtos-container")
-
             produtos.forEach((produto, index) => {
                 const card = document.createElement("div")
                 card.className = "card"
@@ -40,8 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 const cardTitle = document.createElement("h5")
                 cardTitle.className = "card-title"
-                cardTitle.textContent = produto.descricao
-                cardTitle.textContent = produto.nome
+                cardTitle.textContent = produto.desc
 
                 const cardText = document.createElement("p")
                 cardText.className = "card-text"
@@ -50,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 const btnAdicionarAoCarrinho = document.createElement("a")
                 btnAdicionarAoCarrinho.href = "#"
                 btnAdicionarAoCarrinho.className = "btn btn-primary adicionar"
-                btnAdicionarAoCarrinho.textContent = "Adicionar ao Carrinho"
+                btnAdicionarAoCarrinho.textContent = "Adicionar ao carrinho"
                 btnAdicionarAoCarrinho.setAttribute("data-indice", index)
-               
+
                 cardBody.appendChild(cardTitle)
                 cardBody.appendChild(cardText)
                 cardBody.appendChild(btnAdicionarAoCarrinho)
@@ -61,18 +59,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 card.appendChild(cardBody)
 
                 produtosContainer.appendChild(card)
-            })
+            });
+        }).catch((error) => console.log("Erro ao carregar dados", error))
+
+        $("#produtos-container").on("click", ".adicionar", function(){
+            const indexDoProduto = $(this).data("indice")
+            const produtoSelecionado = produtos[indexDoProduto]
+            let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+            carrinho.push(produtoSelecionado)
+            localStorage.setItem("carrinho", JSON.stringify(carrinho))
+            alert("Produto adicionado com sucesso!!!")
         })
-        .catch((error) => console.log("Erro", error))
-
-
-$("#produtos-container").on("click", ".adicionar", function(){
-  const indexDoProduto = $(this).data("indice")
-  const produtoSelecionado = produtos[indexDoProduto]
-  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
-  carrinho.push(produtoSelecionado)
-  localStorage.setItem("carrinho", JSON.stringify(carrinho))
-  alert("Produto adicionado com sucesso!!!")
-})
-
 })
